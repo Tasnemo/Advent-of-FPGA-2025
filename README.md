@@ -7,8 +7,7 @@ I plan to solve the problem in multiple languages like **Python** to model, **VH
 
 I’m testing everything on a **Basys 3** that I borrowed from **NYU’s ECE department**.
 
----
 
-## How it’s organized
+## How I organized it
 
 I'll put the days and then have folders for each implementation that I make, sometimes there will be two of the same language if i felt that my first solution wasn't nice enough
