@@ -1,13 +1,26 @@
-sum = 0
-
+instructions = []
 with open("input.txt") as f:
     for line in f:
-        d = line[0]
-        n = int(line[1:])
+        if line.strip():
+            instructions.append((line[0], int(line[1:])))
 
-        if d == "R":
-            sum += n
-        else:
-            sum -= n
+pos = 50
+part1 = 0
+part2 = 0
 
-res = sum % 60
+for d, n in instructions:
+    old = pos
+
+    if d == 'R':
+        pos += n
+        part2 += pos // 100 - old // 100
+    else:
+        pos -= n
+        part2 += (old - 1) // 100 - (pos - 1) // 100
+
+    if pos % 100 == 0:
+        part1 += 1
+
+print(part1)
+print(part2)
+
