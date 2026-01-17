@@ -14,7 +14,7 @@ I didn't expect how much time it would take me to understand hardcaml and I defi
 ### Day 1, Part 1
 
 The design is just simple sequential addition and subtraction using a modulo state so that it could wrap around and count the amount of times the dial will hit zero.
-The puzzle input is stored in a ROM generated using a Python script that pre-processed the Rs and Ls to be negative and positive so the input would essentially just be integers.(I asked over email beforehand, and Ben Devlin confirmed that this approach should be fine.)
+The puzzle input is stored in a ROM generated using a Python script that pre-processed the Rs and Ls to be negative and positive so the input would essentially just be integers. (This preprocessing choice was sanity-checked over email beforehand.)
 
 ### Day 1, Part 2
 Similar to part 1 but there is a counter that would iterate during the wrap arounds in a modulo state and whenever it would be zero.
