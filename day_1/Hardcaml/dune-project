@@ -1,0 +1,15 @@
+(lang dune 3.11)
+(name hardcaml_day1)
+(generate_opam_files true)
+(package
+ (name hardcaml_day1)
+ (allow_empty)
+ (depends
+  ocaml
+  dune
+  core
+  hardcaml
+  ppx_hardcaml
+  ppx_jane
+  hardcaml_waveterm
+  hardcaml_test_harness))
