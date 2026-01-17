@@ -1,6 +1,7 @@
-(executable
- (name generate)
- (public_name generate)
- (libraries core hardcaml hardcaml_day1)
+(executables
+ (modes byte exe)
+ (names generate)
+ (libraries core.command core_unix.command_unix core hardcaml hardcaml_day1 jane_rope)
  (preprocess
-  (pps ppx_jane)))
+  (pps ppx_jane))
+ (promote))

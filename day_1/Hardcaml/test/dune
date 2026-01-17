@@ -1,7 +1,6 @@
 (library
  (name hardcaml_day1_test)
+ (modules tb_solver)
  (inline_tests)
- (deps input.txt)
  (libraries core hardcaml hardcaml_waveterm hardcaml_test_harness hardcaml_day1)
- (preprocess
-  (pps ppx_jane ppx_assert ppx_inline_test)))
+ (preprocess (pps ppx_jane ppx_assert ppx_inline_test ppx_expect)))

@@ -26,14 +26,14 @@ let streaming_testbench (sim : Harness.Sim.t) =
     match l with
     | [] -> ()
     | [x] -> 
-        i.v_in := Bits.of_int ~width:16 x;
+      i.v_in := Bits.of_int_trunc ~width:16 x;
         i.v_valid := Bits.vdd;
         i.v_last := Bits.vdd;
         cycle ();
         i.v_valid := Bits.gnd;
         i.v_last := Bits.gnd;
     | x :: tl ->
-        i.v_in := Bits.of_int ~width:16 x;
+        i.v_in := Bits.of_int_trunc ~width:16 x;
         i.v_valid := Bits.vdd;
         cycle ();
         i.v_valid := Bits.gnd;
